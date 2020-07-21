@@ -52,7 +52,7 @@ select * from Facilities where facid in (1,5);
 'cheap' or 'expensive', depending on if their monthly maintenance cost is
 more than $100. Return the name and monthly maintenance of the facilities
 in question. */
-
+select name, monthlymaintenance, case when monthlymaintenance > 100 then 'expensive' else 'cheap' end as cheap_expensive from Facilities;
 
 /* Q6: You'd like to get the first and last name of the last member(s)
 who signed up. Try not to use the LIMIT clause for your solution. */

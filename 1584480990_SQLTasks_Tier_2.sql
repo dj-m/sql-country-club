@@ -46,7 +46,7 @@ select facid, name, membercost, monthlymaintenance from Facilities where memberc
 
 /* Q4: Write an SQL query to retrieve the details of facilities with ID 1 and 5.
 Try writing the query without using the OR operator. */
-
+select * from Facilities where facid in (1,5);
 
 /* Q5: Produce a list of facilities, with each labelled as
 'cheap' or 'expensive', depending on if their monthly maintenance cost is

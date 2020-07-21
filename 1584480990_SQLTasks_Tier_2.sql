@@ -36,7 +36,7 @@ Write a SQL query to produce a list of the names of the facilities that do. */
 select name from Facilities where membercost = 0;
 
 /* Q2: How many facilities do not charge a fee to members? */
-
+4
 
 /* Q3: Write an SQL query to show a list of facilities that charge a fee to members,
 where the fee is less than 20% of the facility's monthly maintenance cost.

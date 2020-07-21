@@ -29,6 +29,7 @@ to your GitHub.
 
 Before starting with the questions, feel free to take your time,
 exploring the data, and getting acquainted with the 3 tables. */
+👍🏾
 
 /* QUESTIONS
 /* Q1: Some of the facilities charge a fee to members, but some do not.
@@ -84,6 +85,7 @@ QUESTIONS:
 /* Q10: Produce a list of facilities with a total revenue less than 1000.
 The output of facility name and total revenue, sorted by revenue. Remember
 that there's a different cost for guests and members! */
+
 
 /* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
 

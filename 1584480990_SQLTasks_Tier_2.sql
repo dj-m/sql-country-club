@@ -70,7 +70,7 @@ different costs to members (the listed costs are per half-hour 'slot'), and
 the guest user's ID is always 0. Include in your output the name of the
 facility, the name of the member formatted as a single column, and the cost.
 Order by descending cost, and do not use any subqueries. */
-
+select concat(name, ' ', firstname, ' ', surname) as september_fourteen_bookings, case when memid = 0 then slots * guestcost else slots * membercost end as cost from Bookings left join Facilities using(facid) left join Members using(memid) where starttime like '2012-09-14%' having cost > 30 order by cost desc;
 
 /* Q9: This time, produce the same result as in Q8, but using a subquery. */
 

@@ -78,7 +78,7 @@ select concat(name, ' ', firstname, ' ', surname) as september_fourteen_bookings
 /* PART 2: SQLite
 
 Export the country club data from PHPMyAdmin, and connect to a local SQLite instance from Jupyter notebook
-for the following questions.
+for the following questions. 👍🏾
 
 QUESTIONS:
 /* Q10: Produce a list of facilities with a total revenue less than 1000.

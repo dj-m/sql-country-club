@@ -73,7 +73,7 @@ Order by descending cost, and do not use any subqueries. */
 select concat(name, ' ', firstname, ' ', surname) as september_fourteen_bookings, case when memid = 0 then slots * guestcost else slots * membercost end as cost from Bookings left join Facilities using(facid) left join Members using(memid) where starttime like '2012-09-14%' having cost > 30 order by cost desc;
 
 /* Q9: This time, produce the same result as in Q8, but using a subquery. */
-
+select concat(name, ' ', firstname, ' ', surname) as september_fourteen_bookings, case when memid = 0 then slots * guestcost else slots * membercost end as cost from (select * from Bookings where starttime like '2012-09-14%') as sept_bookings left join Facilities using(facid) left join Members using(memid) where (memid = 0 and slots * guestcost > 30) or (memid != 0 and slots * membercost > 30) order by cost desc;
 
 /* PART 2: SQLite
 

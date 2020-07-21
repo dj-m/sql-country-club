@@ -42,7 +42,7 @@ select name from Facilities where membercost = 0;
 where the fee is less than 20% of the facility's monthly maintenance cost.
 Return the facid, facility name, member cost, and monthly maintenance of the
 facilities in question. */
-
+select facid, name, membercost, monthlymaintenance from Facilities where membercost > 0 and membercost < (monthlymaintenance * 0.2);
 
 /* Q4: Write an SQL query to retrieve the details of facilities with ID 1 and 5.
 Try writing the query without using the OR operator. */

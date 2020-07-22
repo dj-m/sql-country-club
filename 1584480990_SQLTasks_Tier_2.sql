@@ -91,6 +91,6 @@ select name, sum(case when memid = 0 then slots * guestcost else slots * memberc
 select concat(a.surname, ', ', a.firstname) as members, concat(b.surname, ', ', b.firstname) as recommended_by from Members a, Members b where a.recommendedby >0 and a.recommendedby = b.memid order by b.surname;
 
 /* Q12: Find the facilities with their usage by member, but not guests */
-
+select name, concat(firstname, ' ', surname) as member_name, count(surname) as 'usage' from Bookings left join Facilities using(facid) left join Members using(memid) where memid != 0 group by name, member_name;
 
 /* Q13: Find the facilities usage by month, but not guests */

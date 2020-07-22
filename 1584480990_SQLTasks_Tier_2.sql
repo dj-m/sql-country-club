@@ -94,3 +94,4 @@ select concat(a.surname, ', ', a.firstname) as members, concat(b.surname, ', ', 
 select name, concat(firstname, ' ', surname) as member_name, count(surname) as 'usage' from Bookings left join Facilities using(facid) left join Members using(memid) where memid != 0 group by name, member_name;
 
 /* Q13: Find the facilities usage by month, but not guests */
+select extract(month from starttime) as month, name, count(name) as 'usage' from Bookings left join Facilities using(facid)where memid != 0 group by month, name;

@@ -88,7 +88,7 @@ that there's a different cost for guests and members! */
 select name, sum(case when memid = 0 then slots * guestcost else slots * membercost end) as revenue from Bookings left join Facilities using(facid) group by name having revenue < 1000;
 
 /* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
-
+select concat(a.surname, ', ', a.firstname) as members, concat(b.surname, ', ', b.firstname) as recommended_by from Members a, Members b where a.recommendedby >0 and a.recommendedby = b.memid order by b.surname;
 
 /* Q12: Find the facilities with their usage by member, but not guests */
 
